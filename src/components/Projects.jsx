@@ -7,6 +7,13 @@ import { motion } from "framer-motion";
 
 const projectsData = [
   {
+    image: image5,
+    title: "NeuroVision",
+    description: "NeuroVision utilizes deep learning on EEG and MRI data to predict behavioral metrics, enabling accurate diagnosis and treatment of neurological conditions. Its multi-modal approach provides clinicians with valuable insights into brain activity and cognitive states.",
+    technologies: ["Python", "TensorFlow", "Numpy", "Pandas", " OpenCV", "SimpleITK"],
+    githubLink: "https://github.com/Amitreddy14/NeuroVision", 
+  },
+  {
     image: image4,
     title: "2019 General Election Analysis and Swing Prediction Model ",
     description: "I will write the description 4This project analyzes voter behavior in India's 2019 general election, identifying patterns across demographics, economic conditions, and social factors using statistical methods and machine learning. By assessing regional disparities and government policies, we aim to elucidate India's democratic process and improve election outcome forecasting.",
@@ -34,13 +41,15 @@ const projectsData = [
     technologies: ["Python"],
     githubLink: "https://github.com/Amitreddy14/transcript-generator",
   },
-  /*{
-    image: image5,
-    title: "Admin Dashboard",
-    description: "I will write the description 5",
-    technologies: ["HTML", "CSS", "Javascript", "MySQL"],
-    githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
-  },*/
+
+  // {
+  //   image: image5,
+  //   title: "Admin Dashboard",
+  //   description: "I will write the description 5",
+  //   technologies: ["HTML", "CSS", "Javascript", "MySQL"],
+  //   githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
+  // }
+
 ];
 
 const ScrollReveal = ({ children }) => {
