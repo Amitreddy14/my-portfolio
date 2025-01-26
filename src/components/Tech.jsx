@@ -1,4 +1,4 @@
-import { BiLogoAndroid, BiLogoApple, BiLogoCPlusPlus, BiLogoDjango, BiLogoDocker, BiLogoEtsy, BiLogoFlutter, BiLogoJava, BiLogoJavascript, BiLogoMongodb, BiLogoNodejs, BiLogoPostgresql, BiLogoPython, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript, BiLogoWindows } from "react-icons/bi"
+import { BiLogoApple, BiLogoAws, BiLogoCPlusPlus, BiLogoJava, BiLogoJavascript, BiLogoMongodb, BiLogoNodejs, BiLogoPython, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript } from "react-icons/bi"
 import { motion } from "framer-motion";
 
 const Tech = () => {
@@ -24,8 +24,8 @@ const Tech = () => {
         initial="hidden"
         whileInView="visible"
         transition={{duration:0.5}}>
-          <BiLogoTypescript className="cursor-pointer text-[80px]
-          text-sky-500 transition-all duration-300
+          <BiLogoPython className="cursor-pointer text-[80px]
+          text-green-500 transition-all duration-300
           hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
         </motion.div>
 
@@ -34,7 +34,7 @@ const Tech = () => {
         initial="hidden"
         whileInView="visible"
         transition={{duration:0.5}}>
-          <BiLogoJavascript className="cursor-pointer text-[80px] 
+          <BiLogoCPlusPlus className="cursor-pointer text-[80px] 
           text-orange-500 transition-all duration-300 
           hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
         </motion.div>
@@ -44,8 +44,8 @@ const Tech = () => {
         initial="hidden"
         whileInView="visible"
         transition={{duration:0.5}}>
-          <BiLogoPython className="cursor-pointer text-[80px] 
-          text-blue-600 transition-all duration-300 
+          <BiLogoJava className="cursor-pointer text-[80px] 
+          text-red-600 transition-all duration-300 
           hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
         </motion.div>
 
@@ -54,8 +54,8 @@ const Tech = () => {
         initial="hidden"
         whileInView="visible"
         transition={{duration:0.5}}>
-          <BiLogoPostgresql className="cursor-pointer text-[80px] 
-          text-sky-400 transition-all duration-300 
+          <BiLogoJavascript className="cursor-pointer text-[80px] 
+          text-yellow-400 transition-all duration-300 
           hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
         </motion.div>
 
@@ -64,20 +64,11 @@ const Tech = () => {
       initial="hidden"
       whileInView="visible"
       transition={{duration:0.5}}>
-          <BiLogoNodejs className="cursor-pointer text-[80px] 
-          text-green-400 transition-all duration-300 
+          <BiLogoTypescript className="cursor-pointer text-[80px] 
+          text-sky-400 transition-all duration-300 
           hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
         </motion.div>
 
-        <motion.div
-        variants={variants}
-        initial="hidden"
-        whileInView="visible"
-        transition={{duration:0.5}}>
-          <BiLogoJava className="cursor-pointer text-[80px] 
-          text-blue-500 transition-all duration-300 
-          hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
-        </motion.div>
         <motion.div
         variants={variants}
         initial="hidden"
@@ -93,8 +84,18 @@ const Tech = () => {
         initial="hidden"
         whileInView="visible"
         transition={{duration:0.5}}>
-          <BiLogoCPlusPlus className="cursor-pointer text-[80px] 
-          text-blue-500 transition-all duration-300 
+          <BiLogoTailwindCss className="cursor-pointer text-[80px] 
+          text-sky-500 transition-all duration-300 
+          hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
+        </motion.div>
+
+        <motion.div
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        transition={{duration:0.5}}>
+          <BiLogoNodejs className="cursor-pointer text-[80px] 
+          text-green-300 transition-all duration-300 
           hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
         </motion.div>
 
@@ -104,7 +105,27 @@ const Tech = () => {
         whileInView="visible"
         transition={{duration:0.5}}>
           <BiLogoMongodb className="cursor-pointer text-[80px] 
-          text-blue-500 transition-all duration-300 
+          text-green-600 transition-all duration-300 
+          hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
+        </motion.div>
+
+        <motion.div
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        transition={{duration:0.5}}>
+          <BiLogoAws className="cursor-pointer text-[80px] 
+          text-orange-200 transition-all duration-300 
+          hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
+        </motion.div>
+
+        <motion.div
+        variants={variants}
+        initial="hidden"
+        whileInView="visible"
+        transition={{duration:0.5}}>
+          <BiLogoApple className="cursor-pointer text-[80px] 
+          text-orange-400 transition-all duration-300 
           hover:-translate-y-5 sm:text-[100px] md:text-[120px]"/>
         </motion.div>
 
