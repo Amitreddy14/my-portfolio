@@ -8,8 +8,7 @@ const Contacts = () => {
         </h1>
 
         <p className="text-center text-lg font-semibold text-gray-500">
-          Want to chat? Send me an E-mail through this button and I'll will resppond 
-          Whenever I can.
+          Want to chat? Send me an E-mail through this button below.
         </p>
 
         <a href="mailto:jsammureddy140804@gmail.com"
