@@ -3,9 +3,17 @@ import image2 from "/public/2.jpg";
 import image3 from "/public/3.png";
 import image4 from "/public/4.png";
 import image5 from "/public/5.png";
+import image6 from "/public/6.png";
 import { motion } from "framer-motion";
 
 const projectsData = [
+  {
+    image: image6,
+    title: "Vehicle Routing System",
+    description: "The Vehicle Routing project implements a simulated-annealing-based local search algorithm in Java to solve the NP-complete Capacitated Vehicle Routing Problem (CVRP). It optimizes vehicle routes to minimize total travel distance while adhering to capacity and demand constraints.",
+    technologies: ["Java", "Shell", "Simulated Annealing", "Local Search Algorithm"],
+    githubLink: "https://github.com/Amitreddy14/vehicle-routing-main", 
+  },
   {
     image: image5,
     title: "NeuroVision",
