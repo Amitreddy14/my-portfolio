@@ -7,36 +7,52 @@ import image6 from "/public/6.png";
 import { motion } from "framer-motion";
 
 const projectsData = [
-   {
-  image: image5,
-  title: "Admin Dashboard",
-  description: "I will write the description 5",
-  technologies: ["HTML", "CSS", "Javascript", "MySQL"],
-  githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
+  {
+  image: image14,
+  title: "Sea-Lifter",
+  description: "Sea-Lifter uses MongoDB to store open-source microplastic data and applies recent research to map pollution hotspots with NLP-based clean-up suggestions tailored to local plastic density.",
+  technologies: ["Python", "NLP", "MongoDB", "Langchane", "Folium", "Rasa"],
+  githubLink: "https://github.com/Amitreddy14/Sea-Lifter",
   },
 
-   {
-  image: image5,
-  title: "Admin Dashboard",
-  description: "I will write the description 5",
-  technologies: ["HTML", "CSS", "Javascript", "MySQL"],
-  githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
+  {
+  image: image13,
+  title: "GRNABrain",
+  description: "Locus Inference and Generative Adversarial Network for gRNA Design.",
+  technologies: ["Python", "GAN", "CRISPR"],
+  githubLink: "https://github.com/Amitreddy14/GRNABrain",
   },
 
-   {
+  {
+  image: image12,
+  title: "TopoFicial",
+  description: "An Artificial Neural Topology (ANT) built upon a semi-random graph structure that emulates the fundamental characteristics observed in simple cerebral organisms.",
+  technologies: ["Python", "ANT", "ANN", "Graph Theory"],
+  githubLink: "https://github.com/Amitreddy14/TopoFicial",
+  },
+
+  {
+  image: image11,
+  title: "Travel-APP",
+  description: "AI-powered Android application using Kotlin and Python that generates personalized travel itineraries which integrate real-time flight, hotel, and attraction searches via Amadeus and Google Places APIs.",
+  technologies: ["Kotlin", "Python", "HTML", "GoogleMaps API", "Amadeus API"],
+  githubLink: "https://github.com/Amitreddy14/Travel-APP",
+  },
+
+  {
   image: image10,
   title: "Gestroll",
   description: "An Augmented Reality program based on a pre-trained CNN gesture recognition model.",
   technologies: ["Python", "Shell", "openCV", "CNN", "AR"],
-  githubLink: "https://github.com/Amitreddy14/Gestroll", // Add your GitHub repo link here
+  githubLink: "https://github.com/Amitreddy14/Gestroll", 
   },
 
-   {
+  {
   image: image9,
   title: "GEN-CLIP-CVAE",
   description: "CVAE for Image Generation inspired by Hierarchical Text-Conditional Image Generation with CLIP Latents",
   technologies: ["Google Colab", "Python", "VLM", "CLIP"],
-  githubLink: "https://github.com/Amitreddy14/GEN-CLIP-CVAE", // Add your GitHub repo link here
+  githubLink: "https://github.com/Amitreddy14/GEN-CLIP-CVAE", 
   },
 
  {
@@ -44,7 +60,7 @@ const projectsData = [
   title: "SKEIMG",
   description: "A GAN model that converts sketches into photo-like images using Deep Contextual Completion.",
   technologies: ["Python", "Shell", "GAN", "Deep Learning"],
-  githubLink: "https://github.com/Amitreddy14/SKEIMG", // Add your GitHub repo link here
+  githubLink: "https://github.com/Amitreddy14/SKEIMG", 
   },
   {
     image: image7,
