@@ -7,6 +7,52 @@ import image6 from "/public/6.png";
 import { motion } from "framer-motion";
 
 const projectsData = [
+   {
+  image: image5,
+  title: "Admin Dashboard",
+  description: "I will write the description 5",
+  technologies: ["HTML", "CSS", "Javascript", "MySQL"],
+  githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
+  },
+  
+   {
+  image: image5,
+  title: "Admin Dashboard",
+  description: "I will write the description 5",
+  technologies: ["HTML", "CSS", "Javascript", "MySQL"],
+  githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
+  },
+
+   {
+  image: image5,
+  title: "Admin Dashboard",
+  description: "I will write the description 5",
+  technologies: ["HTML", "CSS", "Javascript", "MySQL"],
+  githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
+  },
+
+   {
+  image: image5,
+  title: "Admin Dashboard",
+  description: "I will write the description 5",
+  technologies: ["HTML", "CSS", "Javascript", "MySQL"],
+  githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
+  },
+
+ {
+  image: image5,
+  title: "Admin Dashboard",
+  description: "I will write the description 5",
+  technologies: ["HTML", "CSS", "Javascript", "MySQL"],
+  githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
+  },
+  {
+    image: image7,
+    title: "TravelAI",
+    description: "The Travel Itinerary AI Planner is an AI-driven platform that optimizes travel routes, personalizes itineraries, and integrates AR experiences. It features a Vehicle Routing API, dynamic scheduling, and real-time recommendations for smarter trip planning.",
+    technologies: ["React", "Node.js", "Tailwaind CSS", "Framer Motion", "Google Map API"],
+    githubLink: "https://github.com/Amitreddy14/TravelAI" 
+  },
   {
     image: image6,
     title: "Vehicle Routing System",
@@ -24,7 +70,7 @@ const projectsData = [
   {
     image: image4,
     title: "2019 General Election Analysis and Swing Prediction Model ",
-    description: "I will write the description 4This project analyzes voter behavior in India's 2019 general election, identifying patterns across demographics, economic conditions, and social factors using statistical methods and machine learning. By assessing regional disparities and government policies, we aim to elucidate India's democratic process and improve election outcome forecasting.",
+    description: "This project analyzes voter behavior in India's 2019 general election, identifying patterns across demographics, economic conditions, and social factors using statistical methods and machine learning. By assessing regional disparities and government policies, we aim to elucidate India's democratic process and improve election outcome forecasting.",
     technologies: ["Python"],
     githubLink: "https://github.com/Amitreddy14/2019-Election-Analysis-and-Swing-Prediction-Model", 
   },
