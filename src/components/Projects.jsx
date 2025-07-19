@@ -4,9 +4,45 @@ import image3 from "/public/3.png";
 import image4 from "/public/4.png";
 import image5 from "/public/5.png";
 import image6 from "/public/6.png";
+import image6 from "/public/7.png";
+import image6 from "/public/8.png";
+import image6 from "/public/9.png";
+import image6 from "/public/10.png";
+import image6 from "/public/11.png";
+import image6 from "/public/12.png";
+import image6 from "/public/13.png";
+import image6 from "/public/14.png";
+import image6 from "/public/15.png";
+import image6 from "/public/16.png";
+import image6 from "/public/17.png";
+
 import { motion } from "framer-motion";
 
 const projectsData = [
+  {
+  image: image17,
+  title: "LOC-PRED",
+  description: "LOC-PRED is a continuous geolocation model that predicts GPS coordinates from image data by interpolating between known city centroids using deep feature representations. It enables spatial reasoning from sparse training data, offering a novel approach to image-to-GPS prediction.",
+  technologies: ["Python", "Jupyter Notebook", "Deep Convolutional Networks"],
+  githubLink: "https://github.com/Amitreddy14/LOC-PRED",
+  },
+
+  {
+  image: image16,
+  title: "Centrl-Server-Grp-Chat",
+  description: "A secure Signal-style group chat system with encrypted messaging, certificate-based login, and group support using CryptoPP and Boost libraries.",
+  technologies: ["C++", "CMake"],
+  githubLink: "https://github.com/Amitreddy14/Centrl-Server-Grp-Chat",
+  },
+
+  {
+  image: image15,
+  title: "LZW",
+  description: "A Java-based implementation of the Lempel-Ziv-Welch (LZW) algorithm for file compression. It reads text input, builds a dynamic dictionary, and outputs a compressed binary file.",
+  technologies: ["Java"],
+  githubLink: "https://github.com/Amitreddy14/LZW",
+  },
+
   {
   image: image14,
   title: "Sea-Lifter",
