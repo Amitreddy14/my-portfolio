@@ -14,14 +14,6 @@ const projectsData = [
   technologies: ["HTML", "CSS", "Javascript", "MySQL"],
   githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
   },
-  
-   {
-  image: image5,
-  title: "Admin Dashboard",
-  description: "I will write the description 5",
-  technologies: ["HTML", "CSS", "Javascript", "MySQL"],
-  githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
-  },
 
    {
   image: image5,
@@ -32,19 +24,27 @@ const projectsData = [
   },
 
    {
-  image: image5,
-  title: "Admin Dashboard",
-  description: "I will write the description 5",
-  technologies: ["HTML", "CSS", "Javascript", "MySQL"],
-  githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
+  image: image10,
+  title: "Gestroll",
+  description: "An Augmented Reality program based on a pre-trained CNN gesture recognition model.",
+  technologies: ["Python", "Shell", "openCV", "CNN", "AR"],
+  githubLink: "https://github.com/Amitreddy14/Gestroll", // Add your GitHub repo link here
+  },
+
+   {
+  image: image9,
+  title: "GEN-CLIP-CVAE",
+  description: "CVAE for Image Generation inspired by Hierarchical Text-Conditional Image Generation with CLIP Latents",
+  technologies: ["Google Colab", "Python", "VLM", "CLIP"],
+  githubLink: "https://github.com/Amitreddy14/GEN-CLIP-CVAE", // Add your GitHub repo link here
   },
 
  {
-  image: image5,
-  title: "Admin Dashboard",
-  description: "I will write the description 5",
-  technologies: ["HTML", "CSS", "Javascript", "MySQL"],
-  githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
+  image: image8,
+  title: "SKEIMG",
+  description: "A GAN model that converts sketches into photo-like images using Deep Contextual Completion.",
+  technologies: ["Python", "Shell", "GAN", "Deep Learning"],
+  githubLink: "https://github.com/Amitreddy14/SKEIMG", // Add your GitHub repo link here
   },
   {
     image: image7,
