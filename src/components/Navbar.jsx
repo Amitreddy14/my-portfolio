@@ -34,6 +34,14 @@ const Navbar = () => {
         </a>
 
         <a
+          href="#experience"
+          className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
+        >
+          <li>Experience</li>
+        </a>
+
+
+        <a
           href="#projects"
           className="cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100"
         >
