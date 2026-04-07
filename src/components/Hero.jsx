@@ -45,7 +45,7 @@ const Hero = () => {
 
 export default Hero*/ 
 
-import image from "/image.png";
+import image from "/prof.png";
 import resume from "/resume.pdf"; 
 import { motion } from "framer-motion";
 
