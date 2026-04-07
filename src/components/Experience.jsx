@@ -11,7 +11,7 @@ const experiences = [
     role: "Project Intern",
     company: "Samsung R&D Institute India",
     period: "Mar 2025 - Present",
-    description: "Developed  Fixed  Foveated  Rendering  (FFR)  pipeline  in  OpenGL  &  C++,  reducing  fragment  shading workload by ~30%. Optimized  GPU  shaders  and  implemented  dynamic  resolution  scaling,  improving  frame  stability  by  ~18% under constrained GPU memory. Integrated  and  debugged  FFR  module  within  production-grade  VR  rendering  pipeline,  collaborating  in iterative development cycles to ensure consistent latency and subsystem-level performance stability. ",
+    description: "Developed  Fixed  Foveated  Rendering  (FFR)  pipeline  in  OpenGL  &  C++,  reducing  fragment  shading workload by ~30%. Optimized  GPU  shaders  and  implemented  dynamic  resolution  scaling. ",
     logo: logo3
   },
 
