@@ -1,227 +1,331 @@
-import image1 from "/public/1.png";
-import image2 from "/public/2.jpg";
-import image3 from "/public/3.png";
-import image4 from "/public/4.png";
-import image5 from "/public/5.png";
-import image6 from "/public/6.png";
-import image7 from "/public/7.png";
-import image8 from "/public/8.png";
-import image9 from "/public/9.png";
-import image10 from "/public/10.png";
-import image11 from "/public/11.png";
-import image12 from "/public/12.png";
-import image13 from "/public/13.png";
-import image14 from "/public/14.png";
-import image15 from "/public/15.png";
-import image16 from "/public/16.png";
-import image17 from "/public/17.png";
+import { useEffect, useRef, useState } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { BsGithub, BsArrowUpRight } from 'react-icons/bs'
+import { asset } from '../utils/paths'
 
-import { motion } from "framer-motion";
+gsap.registerPlugin(ScrollTrigger)
+
+const categories = ['All', 'ML / AI', 'Systems', 'Web', 'Research']
 
 const projectsData = [
   {
-  image: image17,
-  title: "LOC-PRED",
-  description: "LOC-PRED is a continuous geolocation model that predicts GPS coordinates from image data by interpolating between known city centroids using deep feature representations. It enables spatial reasoning from sparse training data, offering a novel approach to image-to-GPS prediction.",
-  technologies: ["Python", "Jupyter Notebook", "Deep Convolutional Networks"],
-  githubLink: "https://github.com/Amitreddy14/LOC-PRED",
+    image: '17.png',
+    title: 'LOC-PRED',
+    description: 'Continuous geolocation model that predicts GPS coordinates from image data by interpolating between known city centroids using deep feature representations.',
+    technologies: ['Python', 'Deep CNNs', 'Jupyter'],
+    githubLink: 'https://github.com/Amitreddy14/LOC-PRED',
+    category: 'ML / AI',
+    featured: true,
   },
+  {
+    image: '16.png',
+    title: 'Centrl-Server-Grp-Chat',
+    description: 'Secure Signal-style group chat system with encrypted messaging, certificate-based login, and group support using CryptoPP and Boost.',
+    technologies: ['C++', 'CMake', 'CryptoPP'],
+    githubLink: 'https://github.com/Amitreddy14/Centrl-Server-Grp-Chat',
+    category: 'Systems',
+    featured: true,
+  },
+  {
+    image: null,
+    title: 'Warehouse-Picking',
+    description: 'Modeled warehouse operations using SQL-based data processing and graph traversal algorithms, implementing TSP-inspired heuristics reducing travel distance by ~83%.',
+    technologies: ['SQL', 'Graph Algorithms', 'TSP'],
+    githubLink: 'https://github.com/Amitreddy14/Warehouse-Picking',
+    category: 'Systems',
+    featured: true,
+  },
+  {
+    image: null,
+    title: 'PNNM — Prunable Neural Network',
+    description: 'Production-ready ML system with FastAPI REST backend, Docker containerization, and CI/CD-compatible deployment — applying secure coding practices and automated testing achieving ~9.7x model compression.',
+    technologies: ['Python', 'PyTorch', 'FastAPI', 'Docker', 'CI/CD'],
+    githubLink: 'https://github.com/Amitreddy14',
+    category: 'ML / AI',
+  },
+  {
+    image: null,
+    title: 'Team Management App',
+    description: 'Full-stack collaborative platform using React, Node.js, Express, and MongoDB, applying Git workflows, peer code reviews, unit testing, and Agile delivery practices.',
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+    githubLink: 'https://github.com/Amitreddy14/TEAM-FOUR',
+    category: 'Web',
+  },
+  {
+    image: null,
+    title: 'AI-FOR-BHARAT',
+    description: 'LLM-powered document intelligence platform using Python (FastAPI), React.js, RAG pipelines, and LLM APIs with AI-assisted development and validated outputs.',
+    technologies: ['Python', 'FastAPI', 'React', 'RAG', 'LLMs'],
+    githubLink: 'https://github.com/Amitreddy14',
+    category: 'ML / AI',
+    featured: true,
+  },
+  {
+    image: '15.png',
+    title: 'LZW Compression',
+    description: 'Java implementation of the Lempel-Ziv-Welch algorithm for file compression with dynamic dictionary building.',
+    technologies: ['Java'],
+    githubLink: 'https://github.com/Amitreddy14/LZW',
+    category: 'Systems',
+  },
+  {
+    image: '14.png',
+    title: 'Sea-Lifter',
+    description: 'Uses MongoDB to store microplastic data and applies NLP-based analysis to map pollution hotspots with tailored clean-up suggestions.',
+    technologies: ['Python', 'NLP', 'MongoDB', 'Rasa'],
+    githubLink: 'https://github.com/Amitreddy14/Sea-Lifter',
+    category: 'ML / AI',
+    featured: true,
+  },
+  {
+    image: '13.png',
+    title: 'GRNABrain',
+    description: 'Locus Inference and Generative Adversarial Network for gRNA Design targeting CRISPR applications.',
+    technologies: ['Python', 'GAN', 'CRISPR'],
+    githubLink: 'https://github.com/Amitreddy14/GRNABrain',
+    category: 'Research',
+  },
+  {
+    image: '12.png',
+    title: 'TopoFicial',
+    description: 'Artificial Neural Topology built upon semi-random graph structure emulating characteristics of simple cerebral organisms.',
+    technologies: ['Python', 'Graph Theory', 'ANN'],
+    githubLink: 'https://github.com/Amitreddy14/TopoFicial',
+    category: 'Research',
+    featured: true,
+  },
+  {
+    image: '11.png',
+    title: 'Travel-APP',
+    description: 'AI-powered Android app generating personalized travel itineraries with real-time flight, hotel, and attraction searches.',
+    technologies: ['Kotlin', 'Python', 'Google Maps API'],
+    githubLink: 'https://github.com/Amitreddy14/Travel-APP',
+    category: 'Web',
+  },
+  {
+    image: '10.png',
+    title: 'Gestroll',
+    description: 'Augmented Reality program based on a pre-trained CNN gesture recognition model for hands-free interaction.',
+    technologies: ['Python', 'OpenCV', 'CNN', 'AR'],
+    githubLink: 'https://github.com/Amitreddy14/Gestroll',
+    category: 'ML / AI',
+  },
+  {
+    image: '9.png',
+    title: 'GEN-CLIP-CVAE',
+    description: 'CVAE for image generation inspired by Hierarchical Text-Conditional Image Generation with CLIP Latents.',
+    technologies: ['Python', 'CLIP', 'CVAE'],
+    githubLink: 'https://github.com/Amitreddy14/GEN-CLIP-CVAE',
+    category: 'ML / AI',
+  },
+  {
+    image: '8.png',
+    title: 'SKEIMG',
+    description: 'GAN model that converts sketches into photo-like images using Deep Contextual Completion.',
+    technologies: ['Python', 'GAN', 'Deep Learning'],
+    githubLink: 'https://github.com/Amitreddy14/SKEIMG',
+    category: 'ML / AI',
+  },
+  {
+    image: '7.png',
+    title: 'TravelAI',
+    description: 'AI-driven platform optimizing travel routes with a Vehicle Routing API, dynamic scheduling, and AR experiences.',
+    technologies: ['React', 'Node.js', 'Google Maps API'],
+    githubLink: 'https://github.com/Amitreddy14/TravelAI',
+    category: 'Web',
+  },
+  {
+    image: '6.png',
+    title: 'Vehicle Routing System',
+    description: 'Simulated-annealing-based local search algorithm solving the NP-complete Capacitated Vehicle Routing Problem.',
+    technologies: ['Java', 'Simulated Annealing'],
+    githubLink: 'https://github.com/Amitreddy14/vehicle-routing-main',
+    category: 'Systems',
+  },
+  {
+    image: '5.png',
+    title: 'NeuroVision',
+    description: 'Deep learning on EEG and MRI data to predict behavioral metrics for neurological diagnosis achieving ~86% accuracy.',
+    technologies: ['Python', 'TensorFlow', 'OpenCV'],
+    githubLink: 'https://github.com/Amitreddy14/NeuroVision',
+    category: 'ML / AI',
+    featured: true,
+  },
+  {
+    image: '4.png',
+    title: 'Election Swing Prediction',
+    description: "Analyzing voter behavior in India's 2019 election using statistical methods and ML to forecast outcomes.",
+    technologies: ['Python', 'ML', 'Statistics'],
+    githubLink: 'https://github.com/Amitreddy14/2019-Election-Analysis-and-Swing-Prediction-Model',
+    category: 'Research',
+  },
+  {
+    image: '1.png',
+    title: 'Inventory Management',
+    description: 'Multi-user RDBMS-based system with JavaFX UI, visualization, multi-level access, and auto due updates.',
+    technologies: ['Java', 'JavaFX', 'MySQL'],
+    githubLink: 'https://github.com/Amitreddy14/InventoryManagementSystem',
+    category: 'Systems',
+  },
+  {
+    image: '2.jpg',
+    title: 'MEDCARE',
+    description: 'Patient management webpage with appointment scheduling, patient history, responsive design, and a health chatbot.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    githubLink: 'https://github.com/Amitreddy14/MEDCARE',
+    category: 'Web',
+  },
+  {
+    image: '3.png',
+    title: 'Transcript Generator',
+    description: 'Streamlit app extracting YouTube transcripts and generating summaries with Google Gemini Pro.',
+    technologies: ['Python', 'Streamlit', 'Gemini'],
+    githubLink: 'https://github.com/Amitreddy14/transcript-generator',
+    category: 'Web',
+  },
+]
 
-  {
-  image: image16,
-  title: "Centrl-Server-Grp-Chat",
-  description: "A secure Signal-style group chat system with encrypted messaging, certificate-based login, and group support using CryptoPP and Boost libraries.",
-  technologies: ["C++", "CMake"],
-  githubLink: "https://github.com/Amitreddy14/Centrl-Server-Grp-Chat",
-  },
+/* Fallback gradient for projects with no image */
+const gradients = [
+  'from-indigo-600/20 via-purple-600/10 to-surface-950',
+  'from-emerald-600/20 via-teal-600/10 to-surface-950',
+  'from-amber-600/20 via-orange-600/10 to-surface-950',
+]
 
-  {
-  image: image15,
-  title: "LZW",
-  description: "A Java-based implementation of the Lempel-Ziv-Welch (LZW) algorithm for file compression. It reads text input, builds a dynamic dictionary, and outputs a compressed binary file.",
-  technologies: ["Java"],
-  githubLink: "https://github.com/Amitreddy14/LZW",
-  },
+const ProjectCard = ({ project, index }) => {
+  const cardRef = useRef(null)
 
-  {
-  image: image14,
-  title: "Sea-Lifter",
-  description: "Sea-Lifter uses MongoDB to store open-source microplastic data and applies recent research to map pollution hotspots with NLP-based clean-up suggestions tailored to local plastic density.",
-  technologies: ["Python", "NLP", "MongoDB", "Langchane", "Folium", "Rasa"],
-  githubLink: "https://github.com/Amitreddy14/Sea-Lifter",
-  },
+  useEffect(() => {
+    gsap.fromTo(
+      cardRef.current,
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1, y: 0, duration: 0.6, delay: (index % 3) * 0.1, ease: 'power3.out',
+        scrollTrigger: { trigger: cardRef.current, start: 'top 90%', toggleActions: 'play none none none' },
+      }
+    )
+  }, [index])
 
-  {
-  image: image13,
-  title: "GRNABrain",
-  description: "Locus Inference and Generative Adversarial Network for gRNA Design.",
-  technologies: ["Python", "GAN", "CRISPR"],
-  githubLink: "https://github.com/Amitreddy14/GRNABrain",
-  },
-
-  {
-  image: image12,
-  title: "TopoFicial",
-  description: "An Artificial Neural Topology (ANT) built upon a semi-random graph structure that emulates the fundamental characteristics observed in simple cerebral organisms.",
-  technologies: ["Python", "ANT", "ANN", "Graph Theory"],
-  githubLink: "https://github.com/Amitreddy14/TopoFicial",
-  },
-
-  {
-  image: image11,
-  title: "Travel-APP",
-  description: "AI-powered Android application using Kotlin and Python that generates personalized travel itineraries which integrate real-time flight, hotel, and attraction searches via Amadeus and Google Places APIs.",
-  technologies: ["Kotlin", "Python", "HTML", "GoogleMaps API", "Amadeus API"],
-  githubLink: "https://github.com/Amitreddy14/Travel-APP",
-  },
-
-  {
-  image: image10,
-  title: "Gestroll",
-  description: "An Augmented Reality program based on a pre-trained CNN gesture recognition model.",
-  technologies: ["Python", "Shell", "openCV", "CNN", "AR"],
-  githubLink: "https://github.com/Amitreddy14/Gestroll", 
-  },
-
-  {
-  image: image9,
-  title: "GEN-CLIP-CVAE",
-  description: "CVAE for Image Generation inspired by Hierarchical Text-Conditional Image Generation with CLIP Latents",
-  technologies: ["Google Colab", "Python", "VLM", "CLIP"],
-  githubLink: "https://github.com/Amitreddy14/GEN-CLIP-CVAE", 
-  },
-
- {
-  image: image8,
-  title: "SKEIMG",
-  description: "A GAN model that converts sketches into photo-like images using Deep Contextual Completion.",
-  technologies: ["Python", "Shell", "GAN", "Deep Learning"],
-  githubLink: "https://github.com/Amitreddy14/SKEIMG", 
-  },
-  {
-    image: image7,
-    title: "TravelAI",
-    description: "The Travel Itinerary AI Planner is an AI-driven platform that optimizes travel routes, personalizes itineraries, and integrates AR experiences. It features a Vehicle Routing API, dynamic scheduling, and real-time recommendations for smarter trip planning.",
-    technologies: ["React", "Node.js", "Tailwaind CSS", "Framer Motion", "Google Map API"],
-    githubLink: "https://github.com/Amitreddy14/TravelAI" 
-  },
-  {
-    image: image6,
-    title: "Vehicle Routing System",
-    description: "The Vehicle Routing project implements a simulated-annealing-based local search algorithm in Java to solve the NP-complete Capacitated Vehicle Routing Problem (CVRP). It optimizes vehicle routes to minimize total travel distance while adhering to capacity and demand constraints.",
-    technologies: ["Java", "Shell", "Simulated Annealing", "Local Search Algorithm"],
-    githubLink: "https://github.com/Amitreddy14/vehicle-routing-main", 
-  },
-  {
-    image: image5,
-    title: "NeuroVision",
-    description: "NeuroVision utilizes deep learning on EEG and MRI data to predict behavioral metrics, enabling accurate diagnosis and treatment of neurological conditions. Its multi-modal approach provides clinicians with valuable insights into brain activity and cognitive states.",
-    technologies: ["Python", "TensorFlow", "Numpy", "Pandas", " OpenCV", "SimpleITK"],
-    githubLink: "https://github.com/Amitreddy14/NeuroVision", 
-  },
-  {
-    image: image4,
-    title: "2019 General Election Analysis and Swing Prediction Model ",
-    description: "This project analyzes voter behavior in India's 2019 general election, identifying patterns across demographics, economic conditions, and social factors using statistical methods and machine learning. By assessing regional disparities and government policies, we aim to elucidate India's democratic process and improve election outcome forecasting.",
-    technologies: ["Python"],
-    githubLink: "https://github.com/Amitreddy14/2019-Election-Analysis-and-Swing-Prediction-Model", 
-  },
-  {
-    image: image1,
-    title: "Inventory Management System",
-    description: "A multi-user, RDBMS-based inventory management system with an elegant UI, robust visualization, and multi-level access privileges. Developed using JavaFX and MySQL, with features like auto due update and multi-threading",
-    technologies: ["JAVA", "CSS","MySQL"],
-    githubLink: "https://github.com/Amitreddy14/InventoryManagementSystem",
-  },
-  {
-    image: image2,
-    title: "MEDCARE",
-    description: "This webpage manages patient information and appointments, featuring patient history, responsive design, and a navigation bar for easy access to different sections. Technologies used include HTML, CSS, JavaScript, and local storage for user credentials. The project also includes a health chatbot for user assistance.",
-    technologies: ["HTML", "CSS", "Javascript"],
-    githubLink: "https://github.com/Amitreddy14/MEDCARE", 
-  },
-  {
-    image: image3,
-    title: "Transcript Generator",
-    description: "This Streamlit app extracts YouTube video transcripts using youtube_transcript_api and generates summaries with Google Gemini Pro. Users enter a YouTube link, view the video thumbnail, and click a button to get detailed notes displayed.",
-    technologies: ["Python"],
-    githubLink: "https://github.com/Amitreddy14/transcript-generator",
-  },
-
-  // {
-  //   image: image5,
-  //   title: "Admin Dashboard",
-  //   description: "I will write the description 5",
-  //   technologies: ["HTML", "CSS", "Javascript", "MySQL"],
-  //   githubLink: "https://github.com/your-username/admin-dashboard", // Add your GitHub repo link here
-  // }
-
-];
-
-const ScrollReveal = ({ children }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-    >
-      {children}
-    </motion.div>
-  );
-};
-
-const ProjectCard = ({ project }) => {
-  return (
-    <ScrollReveal>
-      <div className="flex flex-col items-center gap-8 md:flex-row md:gap-24">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 md:w-[300px]"
-        />
-        <div className="flex flex-col gap-5">
-          <div className="flex flex-col gap-3">
-            <a
-              href={project.githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl font-semibold text-blue-500 hover:underline"
-            >
-              {project.title}
-            </a>
-            <p className="text-gray-400">{project.description}</p>
-          </div>
-          <div className="flex flex-wrap gap-5">
-            {project.technologies.map((tech, index) => (
-              <span key={index} className="rounded-lg bg-black p-3">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </ScrollReveal>
-  );
-};
-
-const Projects = () => {
   return (
     <div
-      id="projects"
-      className="flex min-h-screen w-full flex-col items-center justify-center gap-16 p-4 md:px-14 md:py-24"
+      ref={cardRef}
+      className="group relative flex flex-col overflow-hidden rounded-2xl border border-surface-900 bg-surface-950/50 transition-all duration-500 hover:border-surface-700 hover:bg-surface-900/40"
     >
-      <ScrollReveal>
-        <h1 className="text-4xl font-light text-white md:text-6xl">My Projects</h1>
-      </ScrollReveal>
+      {/* Image or gradient fallback */}
+      <div className="relative h-48 overflow-hidden">
+        {project.image ? (
+          <img
+            src={asset(project.image)}
+            alt={project.title}
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        ) : (
+          <div className={`flex h-full w-full items-center justify-center bg-gradient-to-br ${gradients[index % gradients.length]}`}>
+            <span className="font-display text-4xl font-bold text-white/20">{project.title.charAt(0)}</span>
+          </div>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-surface-950 via-surface-950/40 to-transparent" />
 
-      <div className="flex w-full max-w-[1000px] flex-col gap-16 text-white">
-        {projectsData.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))}
+        {project.featured && (
+          <div className="absolute left-4 top-4 rounded-full bg-accent/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur-sm">
+            Featured
+          </div>
+        )}
+
+        <div className="absolute inset-0 flex items-center justify-center bg-surface-950/60 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+          <a
+            href={project.githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-md transition-all hover:bg-white/20"
+          >
+            <BsGithub size={16} />
+            View Code
+            <BsArrowUpRight size={12} />
+          </a>
+        </div>
+      </div>
+
+      <div className="flex flex-1 flex-col p-6">
+        <a href={project.githubLink} target="_blank" rel="noopener noreferrer"
+          className="font-display text-lg font-semibold text-white transition-colors hover:text-accent line-clamp-1">
+          {project.title}
+        </a>
+        <p className="mt-2 flex-1 text-sm leading-relaxed text-surface-400 line-clamp-2">{project.description}</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {project.technologies.map((tech) => (
+            <span key={tech} className="rounded-full bg-surface-900 px-2.5 py-1 text-[11px] font-medium text-surface-500">{tech}</span>
+          ))}
+        </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Projects;
+const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState('All')
+  const sectionRef = useRef(null)
+  const headingRef = useRef(null)
+
+  const filteredProjects =
+    activeFilter === 'All' ? projectsData : projectsData.filter((p) => p.category === activeFilter)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        headingRef.current,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+          scrollTrigger: { trigger: sectionRef.current, start: 'top 75%', toggleActions: 'play none none none' },
+        }
+      )
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section id="projects" ref={sectionRef} className="section-padding">
+      <div className="mx-auto max-w-6xl">
+        <div ref={headingRef} className="mb-12">
+          <p className="mb-3 font-mono text-sm text-accent">04 — Projects</p>
+          <h2 className="font-display text-3xl font-bold text-white md:text-5xl">
+            Selected work<span className="text-accent">.</span>
+          </h2>
+          <p className="mt-4 max-w-xl text-surface-400">
+            A collection of projects across ML/AI, systems programming, web development, and research.
+          </p>
+        </div>
+
+        <div className="mb-10 flex flex-wrap gap-2">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveFilter(cat)}
+              className={`rounded-full px-5 py-2 text-sm font-medium transition-all duration-300 ${
+                activeFilter === cat
+                  ? 'bg-accent text-white shadow-lg shadow-accent/20'
+                  : 'border border-surface-800 text-surface-400 hover:border-surface-600 hover:text-white'
+              }`}
+            >
+              {cat}
+              <span className="ml-2 text-xs opacity-60">
+                {cat === 'All' ? projectsData.length : projectsData.filter((p) => p.category === cat).length}
+              </span>
+            </button>
+          ))}
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {filteredProjects.map((project, idx) => (
+            <ProjectCard key={project.title} project={project} index={idx} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Projects
